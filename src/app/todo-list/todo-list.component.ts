@@ -13,7 +13,6 @@ export class TodoListComponent {
 
   addItem(event: TodoItems): void {
     this.todoItems.push(event);
-    this.newItem = "";
     //console.log(this.todoItems);
   }
 
