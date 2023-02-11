@@ -1,0 +1,10 @@
+<div class="form-group mt-5">
+    <input type="text" class="form-control" [(ngModel)]="newItem" (keyup.enter)="addItem()">
+    <label>Kategoria:</label>
+    <select [(ngModel)]="newItemCategory">
+        <option value="jedzenie">jedzenie</option>
+        <option value="zdrowie">zdrowie</option>
+        <option value="zakupy">zakupy</option>
+    </select>
+    <button class="btn btn-primary" (click)="addItem()" [disabled]="newItem == ''">Dodaj</button>
+</div>

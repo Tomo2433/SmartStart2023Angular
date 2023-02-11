@@ -1,0 +1,16 @@
+<app-new-todoitem (addNewItem)="addItem($event)"></app-new-todoitem>
+<div class="form-group mt-5">
+    <button class="btn btn-primary" (click)="sortItems()">Posortuj</button>
+</div>
+
+<ul class="list-group mt-5">
+    <li class="list-group-item">
+        <div class="d-flex justify-content-between align-items-center" style="font-weight: bold;">
+            <div>NAZWA</div><div>KATEGORIA</div><div>ZAKOŃCZ</div><div>USUŃ</div>
+        </div>
+    </li>
+    <li class="list-group-item" *ngFor="let item of todoItems">
+        <app-todo-item [todoItem]="item" (itemToDelete)="removeItem($event)" (itemToBeDone)="itemIsDoneChange($event)"></app-todo-item>
+    </li>
+</ul>
+
